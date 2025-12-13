@@ -229,7 +229,7 @@ const WORK_LOCATION = {
         // ▶ Project 1
         {
             id: 5,
-            name: "Nike Ecommerce Website Application",
+            name: "Animated Macbook Landing Page",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
@@ -237,7 +237,7 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "Nike Project.txt",
+                    name: "Macbook-Landing.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
