@@ -13,6 +13,20 @@ body {
   background-position: center;
 }
 
+.blog ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blog ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+
 @theme {
   --font-georama: "Georama", sans-serif;
   --font-roboto: "Roboto Mono", monospace;
