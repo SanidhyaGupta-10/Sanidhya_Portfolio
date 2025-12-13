@@ -105,6 +105,10 @@ const techStack = [
         items: ["React.js", "Next.js", "TypeScript"],
     },
     {
+        category: "Animations",
+        items: ["GSAP", "React-Three-Fiber(R3F)", "Motion"],
+    },
+    {
         category: "Mobile",
         items: ["React Native", "Expo"],
     },
@@ -114,7 +118,7 @@ const techStack = [
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS"],
+        items: ["Node.js", "Express"],
     },
     {
         category: "Database",
