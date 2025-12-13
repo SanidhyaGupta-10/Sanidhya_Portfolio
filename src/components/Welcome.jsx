@@ -2,16 +2,11 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-/**
- * Portfolio animation config
- */
 const FONT_WEIGHTS = {
     title: { min: 400, max: 900, default: 400 },
 };
 
-/**
- * Split text into spans
- */
+// Split Texts into Spans
 const renderText = (text, className, baseWeight = 400) => {
     return [...text].map((char, i) => (
         <span
@@ -24,9 +19,7 @@ const renderText = (text, className, baseWeight = 400) => {
     ));
 };
 
-/**
- * Hover animation
- */
+// Hover Animations
 const setupTextHover = (container) => {
     if (!container) return;
 
@@ -73,7 +66,6 @@ const Welcome = () => {
 
     return (
         <section id="welcome">
-            {/* 🔥 FIX: same VARIABLE FONT as portfolio */}
             <p ref={titleRef} className="font-georama">
                 {renderText(
                     "Hey, I'm Sanidhya! Welcome to my",
