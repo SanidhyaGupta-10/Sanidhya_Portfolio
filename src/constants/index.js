@@ -136,29 +136,29 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/SanidhyaGupta-10",
     },
     {
         id: 2,
         text: "Platform",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
-        link: "https://jsmastery.com/",
+        link: "/",
     },
     {
         id: 3,
-        text: "Twitter/X",
-        icon: "/icons/twitter.svg",
+        text: "Instagram",
+        icon: "/icons/instagram.svg",
         bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
+        link: "https://www.instagram.com/sanidhyagupta10/",
     },
-    {
-        id: 4,
-        text: "LinkedIn",
-        icon: "/icons/linkedin.svg",
-        bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
-    },
+    // {
+    //     id: 4,
+    //     text: "LinkedIn",
+    //     icon: "/icons/linkedin.svg",
+    //     bg: "#05b6f6",
+    //     link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    // },
 ];
 
 const photosLinks = [
@@ -192,20 +192,20 @@ const photosLinks = [
 const gallery = [
     {
         id: 1,
-        img: "/images/gal1.png",
+        img: "/images/blog1.png",
     },
     {
         id: 2,
-        img: "/images/gal2.png",
+        img: "/images/blog2.png",
     },
     {
         id: 3,
-        img: "/images/gal3.png",
+        img: "/images/blog3.png",
     },
-    {
-        id: 4,
-        img: "/images/gal4.png",
-    },
+    // {
+    //     id: 4,
+    //     img: "/images/gal4.png",
+    // },
 ];
 
 export {
@@ -243,15 +243,15 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
+                        "The Macbook-Landing Page website is a sleek and modern platform designed with the help of Three.JS, R3F and GSAP.",
+                        "Instead of a simple landing-page, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
                         "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
                         "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "nike.com",
+                    name: "macbook-landing.com",
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
@@ -260,12 +260,12 @@ const WORK_LOCATION = {
                 },
                 {
                     id: 4,
-                    name: "nike.png",
-                    icon: "/images/image.png",
+                    name: "apple.png",
+                    icon: "/images/apple.png",
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
+                    imageUrl: "/images/apple.png",
                 },
                 {
                     id: 5,
@@ -282,7 +282,7 @@ const WORK_LOCATION = {
         // ▶ Project 2
         {
             id: 6,
-            name: "AI Resume Analyzer",
+            name: "SyntaxPrime Roadmap + Notes",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-52 right-80",
@@ -290,31 +290,31 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "AI Resume Analyzer Project.txt",
+                    name: "SyntaxPrime Roadmap + Notes Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 right-10",
                     description: [
-                        "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-                        "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-                        "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
+                        "SyntaxPrime Roadmap + Notes is a smart tool that helps you perfect your roadmap with professional notes.",
+                        "Instead of guessing what to learn, you get structured roadmap and professional notes.",
+                        "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing at job.",
                         "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "ai-resume-analyzer.com",
+                    name: "syntaxprime.com",
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+                    href: "",
                     position: "top-20 left-20",
                 },
                 {
                     id: 4,
-                    name: "ai-resume-analyzer.png",
-                    icon: "/images/image.png",
+                    name: "SyntaxPrime",
+                    icon: "/images/project-2.png",
                     kind: "file",
                     fileType: "img",
                     position: "top-52 left-80",
@@ -335,7 +335,7 @@ const WORK_LOCATION = {
         // ▶ Project 3
         {
             id: 7,
-            name: "Food Delivery App",
+            name: "MathsBuddy AI Maths-Solver",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-80",
@@ -343,31 +343,32 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "Food Delivery App Project.txt",
+                    name: "MathsBuddy AI Math Solver Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                        "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-                        "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-                        "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-                        "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+                        "Maths Buddy is an interactive learning platform designed to make mathematics simple, engaging, and practical.",
+                        "Instead of memorizing formulas, users learn through step-by-step explanations, solved examples, and guided practice.",
+                        "Think of it as a personal math companion that helps you understand concepts, not just get answers.",
+                        "Built with a modern tech stack, Maths Buddy delivers a smooth, responsive experience with a clean and focused interface across devices."
                     ],
+
                 },
                 {
                     id: 2,
-                    name: "food-delivery-app.com",
+                    name: "MathBuddy.com",
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+                    href: "/",
                     position: "top-10 right-20",
                 },
                 {
                     id: 4,
-                    name: "food-delivery-app.png",
-                    icon: "/images/image.png",
+                    name: "maths-buddy.png",
+                    icon: "/images/project-3.png",
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
@@ -401,16 +402,16 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/images/sanidhya.png",
         },
         {
             id: 2,
-            name: "casual-me.png",
+            name: "me.png",
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
+            imageUrl: "/images/sanidhya.png",
         },
         {
             id: 3,
@@ -419,7 +420,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
+            imageUrl: "/images/sanidhya.png",
         },
         {
             id: 4,
@@ -429,13 +430,15 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            image: "/images/sanidhya.png",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-                "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-                "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-                "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+                "Hey, I’m Sanidhya 👋 — a developer who enjoys building clean, fast, and user-friendly applications that feel great to use.",
+                "I work mainly with JavaScript, React, Next.js, and React Native 🚀, focusing on turning ideas into smooth, real-world products.",
+                "I care a lot about clean UI ✨, thoughtful UX 🧠, and writing code that’s easy to understand, maintain, and scale.",
+                "When I’m not coding, you’ll usually find me refining layouts late at night 🌙, exploring new tools, or improving things just for that extra bit of polish 😄",
+                "Connect with me on GitHub 🧑‍💻: https://github.com/SanidhyaGupta-10 and Instagram 📸: https://www.instagram.com/sanidhyagupta10/"
             ],
+
         },
     ],
 };
@@ -453,8 +456,7 @@ const RESUME_LOCATION = {
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
-            // you can add `href` if you want to open a hosted resume
-            // href: "/your/resume/path.pdf",
+            href: "/files/SanidhyaResume.pdf",
         },
     ],
 };
