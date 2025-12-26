@@ -1,9 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/pfp.jpg" />
-    <!-- Google tag (gtag.js) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>
+      Sanidhy – Full Stack Web Developer | React, Next.js Portfolio
+    </title>
+
+    <!-- Primary SEO -->
+    <meta
+      name="description"
+      content="Sanidhy is a full stack web developer specializing in React, Next.js, Node.js, and MongoDB. View portfolio projects, skills, and contact details."
+    />
+    <meta
+      name="keywords"
+      content="Sanidhy, Sanidhy web developer, Sanidhy portfolio, full stack web developer, React developer, Next.js developer"
+    />
+    <meta name="author" content="Sanidhy" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://sanidhy-portfolio.vercel.app/"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/pfp.jpg" />
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sanidhy – Full Stack Web Developer | Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore Sanidhy's full stack web development portfolio featuring React, Next.js, Node.js, and MongoDB projects."
+    />
+    <meta
+      property="og:url"
+      content="https://sanidhy-portfolio.vercel.app/"
+    />
+    <meta property="og:image" content="/pfp.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sanidhy – Full Stack Web Developer | Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Full stack web developer portfolio showcasing React, Next.js, and backend projects."
+    />
+    <meta name="twitter:image" content="/pfp.jpg" />
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Z6YKXX5FYZ"
@@ -14,12 +71,25 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-Z6YKXX5FYZ");
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sanidhya __Portfolio</title>
+
+    <!-- Schema: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanidhy",
+        "url": "https://sanidhy-portfolio.vercel.app/",
+        "jobTitle": "Full Stack Web Developer",
+        "sameAs": [
+          "https://github.com/yourusername",
+          "https://www.linkedin.com/in/yourprofile"
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
