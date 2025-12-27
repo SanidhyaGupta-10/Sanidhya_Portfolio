@@ -308,7 +308,7 @@ const WORK_LOCATION = {
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "",
+                    href: "https://syntax-prime.vercel.app/",
                     position: "top-20 left-20",
                 },
                 {
