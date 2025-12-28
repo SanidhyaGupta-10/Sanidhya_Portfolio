@@ -411,7 +411,7 @@ const WORK_LOCATION = {
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "/",
+                    href: "https://inspixx.vercel.app/",
                     position: "top-10 right-20",
                 },
                 {
