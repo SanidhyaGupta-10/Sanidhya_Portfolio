@@ -255,7 +255,7 @@ const WORK_LOCATION = {
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "/",
+                    href: "https://macbook-landing-page-eta.vercel.app/",
                     position: "top-10 right-20",
                 },
                 {
