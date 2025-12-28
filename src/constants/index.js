@@ -385,6 +385,55 @@ const WORK_LOCATION = {
                 },
             ],
         },
+        {
+            id: 8,
+            name: "iNSpix - HD Photo Gallery",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-10 left-80",
+            windowPosition: "top-[50vh] left-7",
+            children: [
+                {
+                    id: 1,
+                    name: "iNSpix - HD Photo Gallery Project.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                      "iNSpix - HD Free Photos, Videos and GIFs",
+                    ],
+
+                },
+                {
+                    id: 2,
+                    name: "iNSpix.com",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "/",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "iNSpix.png",
+                    icon: "/images/project-4.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-4.png",
+                },
+                {
+                    id: 5,
+                    name: "Design.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://google.com",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
     ],
 };
 
