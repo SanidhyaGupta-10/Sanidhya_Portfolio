@@ -241,7 +241,7 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-10 left-10",
                     description: [
                         "The Macbook-Landing Page website is a sleek and modern platform designed with the help of Three.JS, R3F and GSAP.",
                         "Instead of a simple landing-page, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
@@ -256,7 +256,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://macbook-landing-page-eta.vercel.app/",
-                    position: "top-10 right-20",
+                    position: "top-20 right-20",
                 },
                 {
                     id: 4,
@@ -285,8 +285,8 @@ const WORK_LOCATION = {
             name: "SyntaxPrime Roadmap + Notes",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-80",
-            windowPosition: "top-[20vh] left-7",
+            position: "top-62",
+            windowPosition: "top-[22vh] left-7",
             children: [
                 {
                     id: 1,
@@ -338,8 +338,8 @@ const WORK_LOCATION = {
             name: "MathsBuddy AI Maths-Solver",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-80",
-            windowPosition: "top-[33vh] left-7",
+            position: "top-60 left-80",
+            windowPosition: "top-[40vh] left-7",
             children: [
                 {
                     id: 1,
@@ -391,7 +391,7 @@ const WORK_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-80",
-            windowPosition: "top-[50vh] left-7",
+            windowPosition: "top-[60vh] left-7",
             children: [
                 {
                     id: 1,
