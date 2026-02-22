@@ -122,11 +122,11 @@ const techStack = [
     },
     {
         category: "Database",
-        items: ["MongoDB"],
+        items: ["MongoDB", "PostgreSQL"],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub"],
+        items: ["Git", "GitHub", "Vercel", "Docker"],
     },
 ];
 
@@ -385,6 +385,7 @@ const WORK_LOCATION = {
                 },
             ],
         },
+        // Project 4
         {
             id: 8,
             name: "iNSpix - HD Photo Gallery",
@@ -430,6 +431,62 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "fig",
                     href: "https://google.com",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
+        // Project 5
+        {
+            id: 9,
+            name: "Nexa Cart - PERN Stack Project",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-10 left-60",
+            windowPosition: "top-[5vh] left-[30vh]",
+            children: [
+                {
+                    id: 1,
+                    name: "Nexa Cart - PERN Stack Project.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                      "🛒 Full-Stack E-Commerce: End-to-end shopping functionality.",
+                      "⚡ Next.js Power: Server-Side Rendering (SSR) and API routes for optimal SEO and performance.",
+                      "🧬 Type-Safe ORM: Database management via Drizzle ORM for end-to-end type safety.",
+                      "📦 Relational Modeling: Robust PostgreSQL schema design.",
+                      "🎨 Modern UI: Styled with Tailwind CSS for a responsive, sleek design.",
+                      "🟦 TypeScript Native: Written entirely in TypeScript for better maintainability.",
+                      "🚀 Production-Ready: Architected with scalability and deployment in mind.",
+                    ],
+
+                },
+                {
+                    id: 2,
+                    name: "nexa-cart-pern.vercel.app",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://nexa-cart-pern.vercel.app",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "Nexa Cart - PERN Stack Project.png",
+                    icon: "/images/project-5.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-5.png",
+                },
+                {
+                    id: 5,
+                    name: "Nexa Cart - PERN Stack Project.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://nexa-cart-pern.vercel.app",
                     position: "top-60 right-20",
                 },
             ],
