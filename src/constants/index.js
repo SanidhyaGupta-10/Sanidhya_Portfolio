@@ -391,7 +391,7 @@ const WORK_LOCATION = {
             name: "iNSpix - HD Photo Gallery",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-80",
+            position: "top-10 left-90",
             windowPosition: "top-[60vh] left-7",
             children: [
                 {
@@ -441,7 +441,7 @@ const WORK_LOCATION = {
             name: "Nexa Cart - PERN Stack Project",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-60",
+            position: "top-10 left-50",
             windowPosition: "top-[5vh] left-[30vh]",
             children: [
                 {
