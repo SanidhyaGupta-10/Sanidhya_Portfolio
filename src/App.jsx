@@ -11,10 +11,9 @@ const App = () => {
            <Navbar />
            <Welcome />
            <Dock />
-
            <Terminal />
            <Safari />
-            <Resume />
+           <Resume />
            <Finder />
            <Text />
            <Image />
