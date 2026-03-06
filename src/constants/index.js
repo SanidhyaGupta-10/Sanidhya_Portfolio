@@ -338,7 +338,7 @@ const WORK_LOCATION = {
             name: "MathsBuddy AI Maths-Solver",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-60 left-80",
+            position: "top-60 left-95",
             windowPosition: "top-[40vh] left-7",
             children: [
                 {
@@ -391,7 +391,7 @@ const WORK_LOCATION = {
             name: "iNSpix - HD Photo Gallery",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-90",
+            position: "top-10 left-95",
             windowPosition: "top-[60vh] left-7",
             children: [
                 {
@@ -487,6 +487,62 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "fig",
                     href: "https://nexa-cart-pern.vercel.app",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
+        // Project 6
+        {
+            id: 10,
+            name: "NovaTalk - AI Voice Chat",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-62 left-50",
+            windowPosition: "top-[22vh] left-[30vh]",
+            children: [
+                {
+                    id: 1,
+                    name: "NovaTalk - AI Voice Chat.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "🎙️ Interactive AI Voice Conversations: Talk to your favorite books using advanced AI.",
+                        "⚡ Smart Processing: Analyze and discuss documents with minimal latency.",
+                        "🧬 PDF to Voice: Seamlessly convert PDF content into natural sounding AI voices.",
+                        "📦 Library Management: Organize and access all your books in one place.",
+                        "🎨 Modern UI: Simple and clean interface built with Next.js and Tailwind CSS.",
+                        "🟦 Type-Safe Codebase: Built with TypeScript for maximum stability and speed.",
+                        "🚀 Ready for Learning: Designed for active learners to consume content by talking.",
+                    ],
+
+                },
+                {
+                    id: 2,
+                    name: "nova-talk-ai-voice-agent.vercel.app",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://nova-talk-ai-voice-agent.vercel.app",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "NovaTalk - AI Voice Chat.png",
+                    icon: "/images/project-6.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-6.png",
+                },
+                {
+                    id: 5,
+                    name: "NovaTalk - AI Voice Chat.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://nova-talk-ai-voice-agent.vercel.app",
                     position: "top-60 right-20",
                 },
             ],
