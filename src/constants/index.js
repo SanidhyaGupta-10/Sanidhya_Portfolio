@@ -285,7 +285,7 @@ const WORK_LOCATION = {
             name: "SyntaxPrime Roadmap + Notes",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-62",
+            position: "top-50",
             windowPosition: "top-[22vh] left-7",
             children: [
                 {
@@ -331,14 +331,13 @@ const WORK_LOCATION = {
                 },
             ],
         },
-
         // ▶ Project 3
         {
             id: 7,
             name: "MathsBuddy AI Maths-Solver",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-60 left-95",
+            position: "top-50 left-95",
             windowPosition: "top-[40vh] left-7",
             children: [
                 {
@@ -497,7 +496,7 @@ const WORK_LOCATION = {
             name: "NovaTalk - AI Voice Chat",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-62 left-50",
+            position: "top-50 left-50",
             windowPosition: "top-[22vh] left-[30vh]",
             children: [
                 {
@@ -547,6 +546,58 @@ const WORK_LOCATION = {
                 },
             ],
         },
+        // Project 7
+        {
+            id: 11,
+            name: "Zest - AI Task Processing",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-85 left-8",
+            windowPosition: "top-[40vh] left-[30vh]",
+            children: [
+                {
+                    id: 1,
+                    name: "Zest.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "Zest is a high-performance, AI-powered application designed for lightning-fast task processing.",
+                        "Built with a robust decentralized architecture, Zest handles intensive AI operations asynchronously to ensure a seamless, non-blocking user experience.",
+                    ],
+
+                },
+                {
+                    id: 2,
+                    name: "zest-ai.com",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://zest-delta.vercel.app",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "Zest.png",
+                    icon: "/images/project-7.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-7.png",
+                },
+                {
+                    id: 5,
+                    name: "Zest.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://github.com/SanidhyaGupta-10",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
+
     ],
 };
 
