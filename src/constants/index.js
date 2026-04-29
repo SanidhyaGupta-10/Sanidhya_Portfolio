@@ -118,7 +118,7 @@ const techStack = [
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express"],
+        items: ["Node.js", "Express", "Bun"],
     },
     {
         category: "Database",
@@ -127,6 +127,10 @@ const techStack = [
     {
         category: "Dev Tools",
         items: ["Git", "GitHub", "Vercel", "Docker"],
+    },
+    {
+        category: "AI",
+        items: ["OpenAI", "LLMs"],
     },
 ];
 
@@ -330,7 +334,7 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 4
+        // Project 3
         {
             id: 8,
             name: "iNSpix - HD Photo Gallery",
@@ -380,7 +384,7 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 5
+        // Project 4
         {
             id: 9,
             name: "Nexa Cart - PERN Stack Project",
@@ -436,7 +440,7 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 6
+        // Project 5
         {
             id: 10,
             name: "NovaTalk - AI Voice Chat",
@@ -492,7 +496,7 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 7
+        // Project 6
         {
             id: 11,
             name: "Zest - AI Task Processing",
@@ -535,6 +539,60 @@ const WORK_LOCATION = {
                 {
                     id: 5,
                     name: "Zest.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://github.com/SanidhyaGupta-10",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
+        // Project 7
+        {
+            id: 12,
+            name: "AIhire - AI-Powered Interview Preparation Platform",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-90 left-5",
+            windowPosition: "top-[5vh] left-[55vh]",
+            children: [
+                {
+                    id: 1,
+                    name: "AIhire.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "🚀 AIhire is a sophisticated, AI-powered platform designed to revolutionize the recruitment process.",
+                        "By leveraging Large Language Models (LLMs), the platform analyzes resumes, generates tailored interview questions, and provides comprehensive performance reports.",
+                        "🧠 Resume Parsing: Automatically extracts skills, experience, and projects from uploaded PDF resumes using pdf-parse.",
+                        "🧠 Dynamic Question Generation: Generates context-aware interview questions specific to the candidate's background using OpenAI's GPT models.",
+                        "🧠 Automated Scoring: Evaluates responses and provides a detailed breakdown of strengths and areas for improvement.",
+                        "⚡ Tech Stack: Next.js, React, Tailwind CSS, Express, MongoDB, OpenAI, and Bun.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "interview-report-ai.vercel.app",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://interview-report-ai.vercel.app",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "AIhire.png",
+                    icon: "/images/project-8.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-8.png",
+                },
+                {
+                    id: 5,
+                    name: "AIhire.fig",
                     icon: "/images/plain.png",
                     kind: "file",
                     fileType: "fig",
