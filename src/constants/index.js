@@ -335,14 +335,14 @@ const WORK_LOCATION = {
         //         },
         //     ],
         // },
-        // Project 3
+        // Project 3  — Left col, Row 1
         {
             id: 8,
             name: "iNSpix - HD Photo Gallery",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-95",
-            windowPosition: "top-[40vh] left-7",
+            position: "top-10 left-5",
+            windowPosition: "top-[8vh] left-[1vw]",
             children: [
                 {
                     id: 1,
@@ -352,7 +352,7 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                      "iNSpix - HD Free Photos, Videos and GIFs",
+                        "iNSpix - HD Free Photos, Videos and GIFs",
                     ],
 
                 },
@@ -385,14 +385,14 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 4
+        // Project 4  — Left col, Row 2
         {
             id: 9,
             name: "Nexa Cart - PERN Stack Project",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-50",
-            windowPosition: "top-[5vh] left-[30vh]",
+            windowPosition: "top-[30vh] left-[1vw]",
             children: [
                 {
                     id: 1,
@@ -402,13 +402,13 @@ const WORK_LOCATION = {
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                      "🛒 Full-Stack E-Commerce: End-to-end shopping functionality.",
-                      "⚡ Next.js Power: Server-Side Rendering (SSR) and API routes for optimal SEO and performance.",
-                      "🧬 Type-Safe ORM: Database management via Drizzle ORM for end-to-end type safety.",
-                      "📦 Relational Modeling: Robust PostgreSQL schema design.",
-                      "🎨 Modern UI: Styled with Tailwind CSS for a responsive, sleek design.",
-                      "🟦 TypeScript Native: Written entirely in TypeScript for better maintainability.",
-                      "🚀 Production-Ready: Architected with scalability and deployment in mind.",
+                        "🛒 Full-Stack E-Commerce: End-to-end shopping functionality.",
+                        "⚡ Next.js Power: Server-Side Rendering (SSR) and API routes for optimal SEO and performance.",
+                        "🧬 Type-Safe ORM: Database management via Drizzle ORM for end-to-end type safety.",
+                        "📦 Relational Modeling: Robust PostgreSQL schema design.",
+                        "🎨 Modern UI: Styled with Tailwind CSS for a responsive, sleek design.",
+                        "🟦 TypeScript Native: Written entirely in TypeScript for better maintainability.",
+                        "🚀 Production-Ready: Architected with scalability and deployment in mind.",
                     ],
 
                 },
@@ -441,14 +441,14 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 5
+        // Project 5  — Left col, Row 3
         {
             id: 10,
             name: "NovaTalk - AI Voice Chat",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-50 left-50",
-            windowPosition: "top-[22vh] left-[30vh]",
+            position: "top-10 left-95",
+            windowPosition: "top-[52vh] left-[1vw]",
             children: [
                 {
                     id: 1,
@@ -497,14 +497,14 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 6
+        // Project 6  — Right col, Row 1
         {
             id: 11,
             name: "Zest - AI Task Processing",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-50 left-95",
-            windowPosition: "top-[40vh] left-[30vh]",
+            position: "top-55 left-25",
+            windowPosition: "top-[8vh] left-[calc(11vw+20px)]",
             children: [
                 {
                     id: 1,
@@ -548,14 +548,14 @@ const WORK_LOCATION = {
                 },
             ],
         },
-        // Project 7
+        // Project 7  — Right col, Row 2
         {
             id: 12,
             name: "AIhire - AI-Powered Interview Preparation Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-90 left-5",
-            windowPosition: "top-[5vh] left-[55vh]",
+            position: "top-55 left-70",
+            windowPosition: "top-[30vh] left-[calc(11vw+20px)]",
             children: [
                 {
                     id: 1,
@@ -602,6 +602,74 @@ const WORK_LOCATION = {
                 },
             ],
         },
+
+        // ─────────────────────────────────────────────────────────────
+        // 🚧 FUTURE PROJECTS — Uncomment & fill in when ready
+        // ─────────────────────────────────────────────────────────────
+
+        // // ▶ Project 8  (replace id, name, position, windowPosition, href, imageUrl, description)
+        // {
+        //     id: 13,
+        //     name: "Your Project Name",
+        //     icon: "/images/folder.png",
+        //     kind: "folder",
+        //     position: "top-90 left-50",           // icon position inside Finder grid
+        //     windowPosition: "top-[22vh] left-[55vh]", // Finder window position on screen
+        //     children: [
+        //         {
+        //             id: 1,
+        //             name: "Your Project Name.txt",
+        //             icon: "/images/txt.png",
+        //             kind: "file",
+        //             fileType: "txt",
+        //             position: "top-5 left-10",
+        //             description: [
+        //                 "Line 1 of your project description.",
+        //                 "Line 2 — tech stack, highlights, etc.",
+        //             ],
+        //         },
+        //         {
+        //             id: 2,
+        //             name: "your-project.vercel.app",
+        //             icon: "/images/safari.png",
+        //             kind: "file",
+        //             fileType: "url",
+        //             href: "https://your-project.vercel.app",
+        //             position: "top-10 right-20",
+        //         },
+        //         {
+        //             id: 4,
+        //             name: "Your Project Name.png",
+        //             icon: "/images/project-X.png",  // add your image to /public/images/
+        //             kind: "file",
+        //             fileType: "img",
+        //             position: "top-52 right-80",
+        //             imageUrl: "/images/project-X.png",
+        //         },
+        //         {
+        //             id: 5,
+        //             name: "Your Project Name.fig",
+        //             icon: "/images/plain.png",
+        //             kind: "file",
+        //             fileType: "fig",
+        //             href: "https://your-figma-or-github-link.com",
+        //             position: "top-60 right-20",
+        //         },
+        //     ],
+        // },
+
+        // // ▶ Project 9
+        // {
+        //     id: 14,
+        //     name: "Your Project Name",
+        //     icon: "/images/folder.png",
+        //     kind: "folder",
+        //     position: "top-90 left-95",
+        //     windowPosition: "top-[40vh] left-[55vh]",
+        //     children: [
+        //         // … same structure as above
+        //     ],
+        // },
 
     ],
 };
