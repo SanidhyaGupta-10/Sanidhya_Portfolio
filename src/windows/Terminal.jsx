@@ -5,6 +5,7 @@ import WindowControls from "#components/WindowControls.jsx";
 // Devicon class map — key must match item string exactly
 const ICON_MAP = {
   // Languages
+  "JS":                   "devicon-javascript-plain",
   "C":                    "devicon-c-plain",
   "Go":                   "devicon-go-plain",
   "SQL":                  "devicon-azuresqldatabase-plain",
