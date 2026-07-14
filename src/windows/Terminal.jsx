@@ -2,16 +2,60 @@ import WindowWrapper from "#hoc/WindowWrapper.jsx";
 import { techStack } from "#constants/index.js";
 import WindowControls from "#components/WindowControls.jsx";
 
-// One accent color per category — cycles through this palette
+// Devicon class map — key must match item string exactly
+const ICON_MAP = {
+  // Frontend
+  "React.js":             "devicon-react-original",
+  "Next.js":              "devicon-nextjs-plain",
+  "TypeScript":           "devicon-typescript-plain",
+  // Animations (no devicon — use emoji fallback via data)
+  "GSAP":                 null,
+  "React-Three-Fiber(R3F)": "devicon-threejs-original",
+  "Motion":               null,
+  // Mobile
+  "React Native":         "devicon-react-original",
+  "Expo":                 null,
+  // Styling
+  "Tailwind CSS":         "devicon-tailwindcss-plain",
+  "CSS":                  "devicon-css3-plain",
+  // Backend
+  "Node.js":              "devicon-nodejs-plain",
+  "Express":              "devicon-express-original",
+  "Bun":                  null,
+  // Database
+  "MongoDB":              "devicon-mongodb-plain",
+  "PostgreSQL":           "devicon-postgresql-plain",
+  // Dev Tools
+  "Git":                  "devicon-git-plain",
+  "GitHub":               "devicon-github-original",
+  "Vercel":               null,
+  "Docker":               "devicon-docker-plain",
+  // AI
+  "OpenAI":               null,
+  "LLMs":                 null,
+};
+
+// Emoji fallbacks for items without a devicon
+const EMOJI_MAP = {
+  "GSAP":                 "✦",
+  "Motion":               "〜",
+  "Expo":                 "📱",
+  "Bun":                  "🥟",
+  "Vercel":               "▲",
+  "OpenAI":               "◎",
+  "LLMs":                 "🤖",
+  "React-Three-Fiber(R3F)": "🔷",
+};
+
 const CATEGORY_COLORS = [
-  { text: "#60a5fa", bg: "rgba(96,165,250,0.12)",  border: "rgba(96,165,250,0.25)"  }, // blue
-  { text: "#a78bfa", bg: "rgba(167,139,250,0.12)", border: "rgba(167,139,250,0.25)" }, // violet
-  { text: "#34d399", bg: "rgba(52,211,153,0.12)",  border: "rgba(52,211,153,0.25)"  }, // emerald
-  { text: "#f9a8d4", bg: "rgba(249,168,212,0.12)", border: "rgba(249,168,212,0.25)" }, // pink
-  { text: "#fbbf24", bg: "rgba(251,191,36,0.12)",  border: "rgba(251,191,36,0.25)"  }, // amber
-  { text: "#f87171", bg: "rgba(248,113,113,0.12)", border: "rgba(248,113,113,0.25)" }, // red
-  { text: "#38bdf8", bg: "rgba(56,189,248,0.12)",  border: "rgba(56,189,248,0.25)"  }, // sky
-  { text: "#4ade80", bg: "rgba(74,222,128,0.12)",  border: "rgba(74,222,128,0.25)"  }, // green
+  { text: "#60a5fa", bg: "rgba(96,165,250,0.12)",  border: "rgba(96,165,250,0.25)",  glow: "rgba(96,165,250,0.35)"  },
+  { text: "#a78bfa", bg: "rgba(167,139,250,0.12)", border: "rgba(167,139,250,0.25)", glow: "rgba(167,139,250,0.35)" },
+  { text: "#34d399", bg: "rgba(52,211,153,0.12)",  border: "rgba(52,211,153,0.25)",  glow: "rgba(52,211,153,0.35)"  },
+  { text: "#f9a8d4", bg: "rgba(249,168,212,0.12)", border: "rgba(249,168,212,0.25)", glow: "rgba(249,168,212,0.35)" },
+  { text: "#fbbf24", bg: "rgba(251,191,36,0.12)",  border: "rgba(251,191,36,0.25)",  glow: "rgba(251,191,36,0.35)"  },
+  { text: "#f87171", bg: "rgba(248,113,113,0.12)", border: "rgba(248,113,113,0.25)", glow: "rgba(248,113,113,0.35)" },
+  { text: "#38bdf8", bg: "rgba(56,189,248,0.12)",  border: "rgba(56,189,248,0.25)",  glow: "rgba(56,189,248,0.35)"  },
+  { text: "#4ade80", bg: "rgba(74,222,128,0.12)",  border: "rgba(74,222,128,0.25)",  glow: "rgba(74,222,128,0.35)"  },
 ];
 
 const Terminal = () => {
@@ -51,33 +95,41 @@ const Terminal = () => {
             const color = CATEGORY_COLORS[i % CATEGORY_COLORS.length];
             return (
               <div key={category} className="term-stack-row">
-                <span
-                  className="term-category"
-                  style={{ color: color.text }}
-                >
+                <span className="term-category" style={{ color: color.text }}>
                   ▶ {category.padEnd(12)}
                 </span>
                 <div className="term-badges">
-                  {items.map((item) => (
-                    <span
-                      key={item}
-                      className="term-badge"
-                      style={{
-                        color: color.text,
-                        background: color.bg,
-                        border: `1px solid ${color.border}`,
-                      }}
-                    >
-                      {item}
-                    </span>
-                  ))}
+                  {items.map((item) => {
+                    const iconClass = ICON_MAP[item];
+                    const emoji = EMOJI_MAP[item];
+                    return (
+                      <span
+                        key={item}
+                        className="term-badge"
+                        style={{
+                          color: color.text,
+                          background: color.bg,
+                          border: `1px solid ${color.border}`,
+                          "--glow": color.glow,
+                        }}
+                      >
+                        {iconClass ? (
+                          <i className={`${iconClass} colored term-badge-icon`} />
+                        ) : emoji ? (
+                          <span className="term-badge-emoji">{emoji}</span>
+                        ) : null}
+                        <span className="term-badge-name">{item}</span>
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Footer lines */}
+        {/* Footer */}
+        <hr className="term-separator" />
         <p className="term-output-line term-green term-mt">
           ✔ {techStack.length} categories · {totalItems} technologies loaded
         </p>
@@ -101,3 +153,5 @@ const Terminal = () => {
 const TerminalWindow = WindowWrapper(Terminal, "terminal");
 
 export default TerminalWindow;
+
+
