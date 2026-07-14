@@ -101,6 +101,10 @@ const blogPosts = [
 
 const techStack = [
     {
+        category: "Languages",
+        items: ["TypeScript", "C", "Go", "SQL"],
+    },
+    {
         category: "Frontend",
         items: ["React.js", "Next.js", "TypeScript"],
     },
