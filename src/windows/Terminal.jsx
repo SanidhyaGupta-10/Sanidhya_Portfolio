@@ -67,12 +67,12 @@ const Terminal = () => {
 
   return (
     <>
-      <div id="window-header" className="terminal-header">
+      <div id="window-header" className="terminal-header" style={{ background: '#1c1c1e' }}>
         <WindowControls target="terminal" />
         <span className="terminal-title">sanidhya — tech-stack — zsh</span>
       </div>
 
-      <div className="term-body">
+      <div className="term-body" style={{ background: '#0d1117' }}>
         {/* Prompt line */}
         <p className="term-prompt">
           <span className="term-user">sanidhya@macbook</span>

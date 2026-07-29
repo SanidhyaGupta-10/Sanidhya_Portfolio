@@ -384,7 +384,7 @@ body {
     @apply w-3xl absolute top-32 left-1/12 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     /* ── Dark Terminal ─────────────────────────────────────────── */
-    background: #0d1117;
+    background: #0d1117 !important;
 
     .terminal-header {
       background: #1c1c1e;
