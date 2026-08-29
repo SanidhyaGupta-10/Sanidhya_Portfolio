@@ -102,7 +102,7 @@ const blogPosts = [
 const techStack = [
     {
         category: "Languages",
-        items: ["JavaScript", "C++", "SQL"],
+        items: ["JavaScript", "SQL"],
     },
     {
         category: "Frontend",
@@ -160,13 +160,13 @@ const socials = [
         bg: "#ff866b",
         link: "https://www.instagram.com/sanidhyagupta10/",
     },
-    // {
-    //     id: 4,
-    //     text: "LinkedIn",
-    //     icon: "/icons/linkedin.svg",
-    //     bg: "#05b6f6",
-    //     link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
-    // },
+    {
+        id: 4,
+        text: "LinkedIn",
+        icon: "/icons/linkedin.svg",
+        bg: "#05b6f6",
+        link: "https://www.linkedin.com/in/sanidhya-gupta-492529430/",
+    },
 ];
 
 const photosLinks = [
@@ -726,7 +726,7 @@ const ABOUT_LOCATION = {
                 "I work mainly with JavaScript, React, Next.js, and React Native 🚀, focusing on turning ideas into smooth, real-world products.",
                 "I care a lot about clean UI ✨, thoughtful UX 🧠, and writing code that’s easy to understand, maintain, and scale.",
                 "When I’m not coding, you’ll usually find me refining layouts late at night 🌙, exploring new tools, or improving things just for that extra bit of polish 😄",
-                "Connect with me on GitHub 🧑‍💻: https://github.com/SanidhyaGupta-10 and Instagram 📸: https://www.instagram.com/sanidhyagupta10/"
+                "Connect with me on GitHub 🧑‍💻: https://github.com/SanidhyaGupta-10, LinkedIn 💼: https://www.linkedin.com/in/sanidhya-gupta-492529430/, and Instagram 📸: https://www.instagram.com/sanidhyagupta10/"
             ],
 
         },

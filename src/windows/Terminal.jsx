@@ -6,7 +6,6 @@ import WindowControls from "#components/WindowControls.jsx";
 const ICON_MAP = {
   // Languages
   "JavaScript":           "devicon-javascript-plain",
-  "C++":                  "devicon-cplusplus-plain",
   "SQL":                  "devicon-azuresqldatabase-plain",
   // Frontend
   "React.js":             "devicon-react-original",
