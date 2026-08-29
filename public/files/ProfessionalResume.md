@@ -4,7 +4,7 @@
 **Location:** Varanasi, India
 **Email:** sanidhyagupta955@gmail.com
 **GitHub:** https://github.com/SanidhyaGupta-10
-**LinkedIn:** (optional)
+**LinkedIn:** https://www.linkedin.com/in/sanidhya-gupta-492529430/
 
 ---
 
