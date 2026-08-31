@@ -501,7 +501,108 @@ const WORK_LOCATION = {
                 },
             ],
         },
+        /*
+
         // Project 6  — Right col, Row 1
+        {
+            id: 11,
+            name: "Zest - AI Task Processing",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-55 left-25",
+            windowPosition: "top-[8vh] left-[calc(11vw+20px)]",
+            children: [
+                {
+                    id: 1,
+                    name: "Zest.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "Zest is a high-performance, AI-powered application designed for lightning-fast task processing.",
+                        "Built with a robust decentralized architecture, Zest handles intensive AI operations asynchronously to ensure a seamless, non-blocking user experience."
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "zest-ai.com",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://zest-delta.vercel.app",
+                    position: "top-10 right-20"
+                },
+                {
+                    id: 4,
+                    name: "Zest.png",
+                    icon: "/images/project-7.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-7.png"
+                },
+                {
+                    id: 5,
+                    name: "Zest.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://github.com/SanidhyaGupta-10",
+                    position: "top-60 right-20"
+                }
+            ]
+        }
+        */
+        {
+            id: 11,
+            name: "Zest - AI Task Processing",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-55 left-25",
+            windowPosition: "top-[8vh] left-[calc(11vw+20px)]",
+            children: [
+                {
+                    id: 1,
+                    name: "Zest.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "Zest is a high-performance, AI-powered application designed for lightning-fast task processing.",
+                        "Built with a robust decentralized architecture, Zest handles intensive AI operations asynchronously to ensure a seamless, non-blocking user experience."
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "zest-ai.com",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://zest-delta.vercel.app",
+                    position: "top-10 right-20"
+                },
+                {
+                    id: 4,
+                    name: "Zest.png",
+                    icon: "/images/project-7.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-7.png"
+                },
+                {
+                    id: 5,
+                    name: "Zest.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://github.com/SanidhyaGupta-10",
+                    position: "top-60 right-20"
+                }
+            ]
+        },
         {
             id: 11,
             name: "Zest - AI Task Processing",
