@@ -116,12 +116,19 @@ body {
     @apply flex gap-2;
 
     div {
-      @apply size-3.5 rounded-full cursor-pointer flex items-center justify-center transition-all duration-150;
+      @apply size-3.5 rounded-full cursor-pointer flex items-center justify-center;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  background-color 0.2s ease;
+    }
+
+    div:active {
+      transform: scale(0.85);
     }
 
     .control-icon {
-      @apply size-2 opacity-0 transition-opacity duration-150 stroke-[3px];
-      color: rgba(0, 0, 0, 0.5);
+      @apply size-2 opacity-0 stroke-[3px];
+      color: rgba(0, 0, 0, 0.55);
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &:hover .control-icon {
@@ -130,46 +137,38 @@ body {
 
     .close {
       @apply bg-[#ff6157];
-
-      &:hover {
-        @apply bg-[#e04940];
-      }
+      &:hover { @apply bg-[#e64940]; }
     }
 
     .minimize {
-      @apply bg-[#ffc030];
-
-      &:hover {
-        @apply bg-[#e0a820];
-      }
+      @apply bg-[#ffc130];
+      &:hover { @apply bg-[#e5aa20]; }
     }
 
     .maximize {
-      @apply bg-[#2acb42];
-
-      &:hover {
-        @apply bg-[#1fb035];
-      }
+      @apply bg-[#28c840];
+      &:hover { @apply bg-[#1aad32]; }
     }
   }
 
   .dock-dot {
-    @apply w-1 h-1 rounded-full bg-white/80 mt-1 absolute -bottom-2;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    @apply w-1 h-1 rounded-full bg-white/90 absolute -bottom-2;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    transition: opacity 0.3s ease, background-color 0.3s ease;
   }
 
   .dock-dot-minimized {
-    @apply bg-white/40;
-    animation: dock-dot-pulse 2s ease-in-out infinite;
+    @apply bg-white/50;
+    animation: dock-dot-pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   @keyframes dock-dot-pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0.35; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
   }
 
   .is-maximized {
-    transition: border-radius 0.35s ease;
+    will-change: transform, width, height, top, left, border-radius;
   }
 
   #window-header {
