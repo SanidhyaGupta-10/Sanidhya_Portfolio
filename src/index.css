@@ -115,17 +115,61 @@ body {
   #window-controls {
     @apply flex gap-2;
 
+    div {
+      @apply size-3.5 rounded-full cursor-pointer flex items-center justify-center transition-all duration-150;
+    }
+
+    .control-icon {
+      @apply size-2 opacity-0 transition-opacity duration-150 stroke-[3px];
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover .control-icon {
+      opacity: 1;
+    }
+
     .close {
-      @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+      @apply bg-[#ff6157];
+
+      &:hover {
+        @apply bg-[#e04940];
+      }
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#ffc030];
+      @apply bg-[#ffc030];
+
+      &:hover {
+        @apply bg-[#e0a820];
+      }
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#2acb42];
+      @apply bg-[#2acb42];
+
+      &:hover {
+        @apply bg-[#1fb035];
+      }
     }
+  }
+
+  .dock-dot {
+    @apply w-1 h-1 rounded-full bg-white/80 mt-1 absolute -bottom-2;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+
+  .dock-dot-minimized {
+    @apply bg-white/40;
+    animation: dock-dot-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes dock-dot-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .is-maximized {
+    transition: border-radius 0.35s ease;
   }
 
   #window-header {
