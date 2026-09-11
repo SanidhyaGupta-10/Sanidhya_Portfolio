@@ -15,13 +15,17 @@ Step into a fully functional desktop environment right in your browser. This por
 
 ### ✨ Key Features
 
+- **🔐 Welcome Screen**: Boot into the portfolio through an animated macOS-style login screen.
 - **📂 Functional Finder**: Navigate through my projects and skills using a native-feeling file explorer.
 - **🚀 Interactive Dock**: Quick access to all core applications with smooth magnification effects.
 - **🪟 Draggable Windows**: Multitasking at its best. Open, close, and drag windows just like on a Mac.
 - **📟 Terminal Experience**: Explore my technical stack through an interactive command-line interface.
 - **🌍 Safari Integration**: Read my latest articles and explore web projects without leaving the desktop.
 - **📸 Photo Gallery**: A beautiful space for visual projects and memories.
-- **📄 Resume Viewer**: Integrated PDF viewer for quick professional reference.
+- **🖼️ Image Viewer**: Open and preview images in a native Preview-style window.
+- **📝 Text Editor**: View project details and descriptions in a clean TextEdit-style window.
+- **📄 Resume Viewer**: Integrated HTML resume viewer for quick professional reference.
+- **📇 Contact Card**: Quickly access social links and contact info.
 - **🎭 Smooth Motion**: Powered by GSAP for high-performance, fluid animations that mimic macOS perfectly.
 
 ---
@@ -29,17 +33,18 @@ Step into a fully functional desktop environment right in your browser. This por
 ## 🛠️ Tech Stack
 
 ### Core
-- **Framework:** [React 19](https://reactjs.org/) & [Vite](https://vitejs.dev/)
+- **Framework:** [React 19](https://react.dev/) & [Vite 7](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
-- **Animations:** [GSAP](https://greensock.com/gsap/) (GreenSock)
+- **State Management:** [Zustand 5](https://github.com/pmndrs/zustand)
+- **Animations:** [GSAP 3](https://greensock.com/gsap/) (GreenSock)
 
 ### Utilities
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **PDF Rendering:** [React PDF](https://react-pdf.org/)
-- **Time/Date:** [Dayjs](https://day.js.org/)
+- **Time/Date:** [Day.js](https://day.js.org/)
 - **Tooltips:** [React Tooltip](https://react-tooltip.com/)
 - **Immutability:** [Immer](https://immerjs.github.io/immer/)
+- **Class Names:** [clsx](https://github.com/lukeed/clsx)
 
 ---
 
@@ -47,13 +52,30 @@ Step into a fully functional desktop environment right in your browser. This por
 
 ```bash
 src/
-├── components/     # Core UI elements (Dock, Navbar, Window Controls)
-├── windows/        # Individual Application windows (Safari, Terminal, Finder, etc.)
-├── store/          # Zustand state management for window & OS logic
-├── constants/      # Content data (Projects, Skills, About info)
-├── hoc/            # Higher-Order Components for window behavior
-├── utils/          # Helper functions and animation logic
-└── index.css       # Global styles and Tailwind directives
+├── components/          # Core UI — Dock, Navbar, Welcome screen, Window Controls
+│   ├── Dock.jsx         # macOS-style dock with magnification
+│   ├── Home.jsx         # Desktop home layout
+│   ├── Navbar.jsx       # Top menu bar
+│   ├── Welcome.jsx      # Boot / login screen
+│   └── WindowControls.jsx  # Traffic-light close/minimize/maximize buttons
+├── windows/             # Individual application windows
+│   ├── Finder.jsx       # File explorer for projects & skills
+│   ├── Terminal.jsx     # Interactive CLI
+│   ├── Safari.jsx       # Web browser for articles & links
+│   ├── Photos.jsx       # Photo gallery
+│   ├── Image.jsx        # Single image viewer (Preview)
+│   ├── Text.jsx         # Text/detail viewer (TextEdit)
+│   ├── Resume.jsx       # HTML resume viewer
+│   └── Contact.jsx      # Contact card with social links
+├── store/               # Zustand state management
+│   ├── window.js        # Window open/close/focus/drag state
+│   └── location.js      # Finder navigation state
+├── constants/           # Content data — projects, skills, social links, about info
+├── hoc/                 # Higher-Order Components
+│   └── WindowWrapper.jsx  # Shared window chrome, dragging & focus behavior
+├── utils/               # Helper functions and animation logic
+│   └── thing.js         # Utility helpers
+└── index.css            # Global styles and Tailwind directives
 ```
 
 ---
@@ -91,7 +113,7 @@ To run this project locally, follow these steps:
 
 ## 👤 About Me
 
-Hey, I’m **Sanidhya** 👋 — a developer who enjoys building clean, fast, and user-friendly applications that feel great to use. I specialize in the JavaScript ecosystem, focusing on turning complex ideas into smooth, real-world products.
+Hey, I'm **Sanidhya** 👋 — a developer who enjoys building clean, fast, and user-friendly applications that feel great to use. I specialize in the JavaScript ecosystem, focusing on turning complex ideas into smooth, real-world products.
 
 - **GitHub:** [@SanidhyaGupta-10](https://github.com/SanidhyaGupta-10)
 - **Instagram:** [@sanidhyagupta10](https://www.instagram.com/sanidhyagupta10/)
