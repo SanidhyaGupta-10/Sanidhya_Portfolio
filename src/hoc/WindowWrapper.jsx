@@ -120,7 +120,12 @@ const WindowWrapper = (Component, windowKey) => {
                     width: cs.width,
                     height: cs.height || "auto",
                     borderRadius: cs.borderRadius,
+                    transform: cs.transform,
+                    translate: cs.translate,
                 };
+
+                // Override CSS centering transforms (e.g. -translate-x-1/2)
+                el.style.translate = "none";
 
                 gsap.to(el, {
                     position: "fixed",
@@ -137,6 +142,10 @@ const WindowWrapper = (Component, windowKey) => {
                 });
             } else if (prevPosRef.current) {
                 const prev = prevPosRef.current;
+
+                // Restore original CSS translate
+                el.style.translate = "";
+
                 gsap.to(el, {
                     position: "absolute",
                     width: prev.width,
