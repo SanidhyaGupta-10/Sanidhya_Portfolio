@@ -2,27 +2,37 @@ import { Draggable } from "gsap/Draggable";
 import gsap from "gsap";
 gsap.registerPlugin(Draggable);
 
+import { useState } from "react";
+import BootScreen from "#components/BootScreen.jsx";
 import { Navbar, Welcome, Dock, Home } from '#components'
 import { Terminal, Safari, Resume, Finder, Text, Image, Contact, Photos } from "#windows";
 
 const App = () => {
+    const [booted, setBooted] = useState(false);
+
     return (
-        <main>
-            <Navbar />
-            <Welcome />
-            <Dock />
+        <>
+            {!booted && <BootScreen onComplete={() => setBooted(true)} />}
 
-            <Home />
+            {booted && (
+                <main>
+                    <Navbar />
+                    <Welcome />
+                    <Dock />
 
-            <Terminal />
-            <Safari />
-            <Resume />
-            <Finder />
-            <Text />
-            <Image />
-            <Contact />
-            <Photos />
-        </main>
+                    <Home />
+
+                    <Terminal />
+                    <Safari />
+                    <Resume />
+                    <Finder />
+                    <Text />
+                    <Image />
+                    <Contact />
+                    <Photos />
+                </main>
+            )}
+        </>
     )
 }
 export default App
