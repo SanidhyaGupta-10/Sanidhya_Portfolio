@@ -24,43 +24,147 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 32px;
   user-select: none;
+  overflow: hidden;
 }
 
-.boot-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.08));
+/* Floating particles */
+.boot-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
+.boot-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.9) 0%, rgba(167, 139, 250, 0.4) 100%);
+  box-shadow: 0 0 6px rgba(96, 165, 250, 0.6);
+}
+
+/* Ambient glow behind crest */
+.boot-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.25) 0%,
+    rgba(167, 139, 250, 0.15) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  z-index: 1;
+}
+
+/* Decorative rotating ring */
+.boot-ring {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-top: 1px solid rgba(167, 139, 250, 0.4);
+  border-right: 1px solid rgba(96, 165, 250, 0.3);
+  z-index: 2;
+  animation: boot-ring-spin 8s linear infinite;
+}
+
+@keyframes boot-ring-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* SG Crest image */
+.boot-crest {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  z-index: 3;
+  filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.3))
+          drop-shadow(0 0 80px rgba(167, 139, 250, 0.15));
+  border-radius: 50%;
+}
+
+/* Loading bar */
 .boot-bar-track {
-  width: 280px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 240px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  z-index: 5;
 }
 
 .boot-bar-fill {
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa, #60a5fa);
+  background-size: 200% 100%;
   border-radius: 10px;
   transform-origin: left center;
   transform: scaleX(0);
+  animation: boot-bar-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes boot-bar-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Name container */
+.boot-name-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  z-index: 5;
 }
 
 .boot-name {
   font-family: 'Georama', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 8px;
   color: #fff;
   text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e0e7ff 0%, #a78bfa 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Decorative lines flanking the name */
+.boot-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.5), transparent);
+  flex-shrink: 0;
+}
+
+.boot-line-left {
+  transform-origin: right center;
+}
+
+.boot-line-right {
+  transform-origin: left center;
+}
+
+/* Subtitle */
+.boot-subtitle {
   position: absolute;
+  bottom: calc(50% - 60px);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  z-index: 5;
 }
 
 .blog ::-webkit-scrollbar {
