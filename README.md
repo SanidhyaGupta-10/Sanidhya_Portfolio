@@ -59,30 +59,27 @@ This isn't a typical developer portfolio. It's a **pixel-perfect macOS desktop e
 
 ## 🏗️ Architecture
 
-```
-+-----------------------------------------------------+
-|                    React 19 + Vite 7                |
-+-----------------------------------------------------+
-|                                                     |
-|   +----------+  +----------+  +------------------+ |
-|   | Welcome  |> | Desktop  |> | App Windows      | |
-|   | Screen   |  | (Home)   |  | (Finder, Term,   | |
-|   |          |  |          |  |  Safari, etc.)   | |
-|   +----------+  +----------+  +------------------+ |
-|        |              |               |             |
-|        v              v               v             |
-|   +---------------------------------------------+   |
-|   |          WindowWrapper (HOC)                |   |
-|   |   Dragging - Focus - Chrome - State Mgmt    |   |
-|   +---------------------------------------------+   |
-|        |              |               |             |
-|        v              v               v             |
-|   +----------+  +----------+  +--------------+      |
-|   | Zustand  |  |   GSAP   |  | Tailwind 4   |     |
-|   |  Stores  |  |  Motions |  |   Styling    |     |
-|   +----------+  +----------+  +--------------+      |
-|                                                     |
-+-----------------------------------------------------+
+```mermaid
+flowchart TB
+    subgraph stack ["React 19 + Vite 7"]
+        direction TB
+        A["Welcome Screen"] --> B["Desktop (Home)"] --> C["App Windows\n(Finder, Terminal,\nSafari, etc.)"]
+
+        A & B & C --> W["WindowWrapper (HOC)\nDragging · Focus · Chrome · State Mgmt"]
+
+        W --> Z["Zustand 5\nStores"]
+        W --> G["GSAP 3\nMotions"]
+        W --> T["Tailwind 4\nStyling"]
+    end
+
+    style stack fill:transparent,stroke:#555,stroke-width:2px
+    style A fill:#1e293b,stroke:#3b82f6,color:#e2e8f0
+    style B fill:#1e293b,stroke:#3b82f6,color:#e2e8f0
+    style C fill:#1e293b,stroke:#3b82f6,color:#e2e8f0
+    style W fill:#0f172a,stroke:#8b5cf6,color:#e2e8f0
+    style Z fill:#1e293b,stroke:#22c55e,color:#e2e8f0
+    style G fill:#1e293b,stroke:#22c55e,color:#e2e8f0
+    style T fill:#1e293b,stroke:#22c55e,color:#e2e8f0
 ```
 
 ---
