@@ -12,7 +12,96 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: none; /* hide native cursor globally */
 }
+
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+/* ── Custom Cursor ─────────────────────────────────────────── */
+
+/* Inner precise dot */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #a78bfa 0%, #60a5fa 100%);
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.8), 0 0 20px rgba(96, 165, 250, 0.4);
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform;
+  /* Offset so centre of dot aligns with hotspot */
+  margin-top: -4px;
+  margin-left: -4px;
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease,
+              box-shadow 0.2s ease, margin 0.2s ease, opacity 0.3s ease;
+}
+
+/* Outer trailing ring */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(167, 139, 250, 0.6);
+  background: rgba(167, 139, 250, 0.05);
+  backdrop-filter: blur(0px);
+  pointer-events: none;
+  z-index: 99998;
+  will-change: transform;
+  margin-top: -16px;
+  margin-left: -16px;
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease,
+              background 0.25s ease, margin 0.25s ease, opacity 0.3s ease,
+              border-width 0.2s ease;
+}
+
+/* ── Pointer state (hovering interactive elements) ── */
+.cursor-dot--pointer {
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: -6px;
+  background: radial-gradient(circle, #f9a8d4 0%, #a78bfa 50%, #60a5fa 100%);
+  box-shadow: 0 0 14px rgba(249, 168, 212, 0.9), 0 0 28px rgba(167, 139, 250, 0.5);
+}
+
+.cursor-ring--pointer {
+  width: 42px;
+  height: 42px;
+  margin-top: -21px;
+  margin-left: -21px;
+  border-color: rgba(249, 168, 212, 0.7);
+  background: rgba(249, 168, 212, 0.06);
+  border-width: 2px;
+}
+
+/* ── Click state ── */
+.cursor-dot--click {
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  background: radial-gradient(circle, #fff 0%, #a78bfa 100%);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 32px rgba(167, 139, 250, 0.7);
+}
+
+.cursor-ring--click {
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  margin-left: -11px;
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  border-width: 2px;
+}
+
 
 /* ── Boot Screen ─────────────────────────────────────────── */
 #boot-screen {

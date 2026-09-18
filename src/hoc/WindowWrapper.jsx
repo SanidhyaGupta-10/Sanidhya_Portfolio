@@ -112,58 +112,73 @@ const WindowWrapper = (Component, windowKey) => {
             if (!el || !isOpen || isMinimized) return;
 
             if (isMaximized) {
-                // Store current bounds for restore
+                // Snapshot actual visual position in pixels (handles CSS centering like left-1/2 -translate-x-1/2)
+                const rect = el.getBoundingClientRect();
                 const cs = getComputedStyle(el);
+
                 prevPosRef.current = {
-                    top: cs.top,
-                    left: cs.left,
-                    width: cs.width,
-                    height: cs.height || "auto",
+                    rectTop: rect.top,
+                    rectLeft: rect.left,
+                    rectWidth: rect.width,
+                    rectHeight: rect.height,
                     borderRadius: cs.borderRadius,
-                    translate: cs.translate,
-                    // Save Draggable's current x/y so we can put it back
                     dragX: d ? d.x : 0,
                     dragY: d ? d.y : 0,
                 };
 
-                // Override CSS centering transforms (e.g. -translate-x-1/2)
-                el.style.translate = "none";
-
-                gsap.to(el, {
+                // Step 1: freeze element at its exact visual position using fixed + px
+                // This neutralises ALL CSS centering (left:50%, transform:translateX, etc.)
+                gsap.set(el, {
                     position: "fixed",
+                    top: rect.top,
+                    left: rect.left,
+                    width: rect.width,
+                    height: rect.height,
+                    x: 0,
+                    y: 0,
+                });
+                // Clear any CSS-class-based transforms (Tailwind -translate-x-1/2)
+                el.style.transform = "";
+                el.style.translate = "";
+
+                // Step 2: animate to fullscreen
+                gsap.to(el, {
                     top: 40,
                     left: 0,
                     width: "100vw",
                     height: "calc(100vh - 40px)",
                     borderRadius: 0,
-                    x: 0,
-                    y: 0,
                     duration: 0.4,
                     ease: "power2.inOut",
                 });
             } else if (prevPosRef.current) {
                 const prev = prevPosRef.current;
 
-                // Restore original CSS translate
-                el.style.translate = prev.translate || "";
-
+                // Animate back to the original pixel rect (still fixed, no CSS classes fighting)
                 gsap.to(el, {
-                    position: "absolute",
-                    top: prev.top,
-                    left: prev.left,
-                    width: prev.width,
-                    height: prev.height,
+                    top: prev.rectTop,
+                    left: prev.rectLeft,
+                    width: prev.rectWidth,
+                    height: prev.rectHeight,
                     borderRadius: prev.borderRadius,
-                    x: prev.dragX,
-                    y: prev.dragY,
                     duration: 0.4,
                     ease: "power2.inOut",
                     onComplete: () => {
-                        // Re-sync Draggable with the restored position
-                        if (d) d.update();
+                        // Hand position back to CSS classes by clearing inline overrides
+                        gsap.set(el, {
+                            position: "absolute",
+                            clearProps: "top,left,width,height,x,y",
+                        });
+                        el.style.transform = "";
+                        el.style.translate = "";
+                        // Re-apply Draggable's offset
+                        if (d) {
+                            gsap.set(el, { x: prev.dragX, y: prev.dragY });
+                            d.update();
+                        }
+                        prevPosRef.current = null;
                     },
                 });
-                prevPosRef.current = null;
             }
         }, [isMaximized]);
 
