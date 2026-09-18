@@ -108,20 +108,22 @@ const WindowWrapper = (Component, windowKey) => {
         // ─── Maximize / Restore ───
         useLayoutEffect(() => {
             const el = ref.current;
+            const d = draggableRef.current;
             if (!el || !isOpen || isMinimized) return;
 
             if (isMaximized) {
                 // Store current bounds for restore
-                const rect = el.getBoundingClientRect();
                 const cs = getComputedStyle(el);
                 prevPosRef.current = {
-                    top: rect.top,
-                    left: rect.left,
+                    top: cs.top,
+                    left: cs.left,
                     width: cs.width,
                     height: cs.height || "auto",
                     borderRadius: cs.borderRadius,
-                    transform: cs.transform,
                     translate: cs.translate,
+                    // Save Draggable's current x/y so we can put it back
+                    dragX: d ? d.x : 0,
+                    dragY: d ? d.y : 0,
                 };
 
                 // Override CSS centering transforms (e.g. -translate-x-1/2)
@@ -138,21 +140,28 @@ const WindowWrapper = (Component, windowKey) => {
                     y: 0,
                     duration: 0.4,
                     ease: "power2.inOut",
-                    clearProps: "transform",
                 });
             } else if (prevPosRef.current) {
                 const prev = prevPosRef.current;
 
                 // Restore original CSS translate
-                el.style.translate = "";
+                el.style.translate = prev.translate || "";
 
                 gsap.to(el, {
                     position: "absolute",
+                    top: prev.top,
+                    left: prev.left,
                     width: prev.width,
                     height: prev.height,
                     borderRadius: prev.borderRadius,
+                    x: prev.dragX,
+                    y: prev.dragY,
                     duration: 0.4,
                     ease: "power2.inOut",
+                    onComplete: () => {
+                        // Re-sync Draggable with the restored position
+                        if (d) d.update();
+                    },
                 });
                 prevPosRef.current = null;
             }
