@@ -20,10 +20,8 @@ const CustomCursor = () => {
             mouseX = e.clientX;
             mouseY = e.clientY;
 
-            // Snap dot to exact cursor position
             dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 
-            // Detect if over a clickable element
             const el = document.elementFromPoint(mouseX, mouseY);
             const hovering = el?.closest(
                 "a, button, [role='button'], input, textarea, select, label, [tabindex], .cursor-pointer, .dock-icon, .maximize, .minimize, .close, li"
@@ -60,7 +58,6 @@ const CustomCursor = () => {
             ring.classList.remove("cursor-ring--click");
         };
 
-        // Smooth ring follows mouse with lerp
         const lerp = (a, b, t) => a + (b - a) * t;
         const animate = () => {
             ringX = lerp(ringX, mouseX, 0.12);
