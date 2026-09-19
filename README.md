@@ -206,6 +206,7 @@ Specializing in the JavaScript ecosystem, turning complex ideas into smooth, rea
 <br/>
 
 [![GitHub](https://img.shields.io/badge/GitHub-SanidhyaGupta--10-181717?style=for-the-badge&logo=github)](https://github.com/SanidhyaGupta-10)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sanidhya_Gupta-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sanidhya-gupta-492529430/)
 [![Instagram](https://img.shields.io/badge/Instagram-sanidhyagupta10-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sanidhyagupta10/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://sanidhy-portfolio.vercel.app/)
 
