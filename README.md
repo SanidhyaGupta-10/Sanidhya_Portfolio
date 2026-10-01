@@ -6,7 +6,13 @@
 
 <br/>
 
+> 🚀 **v2.0 Beta is on its way!** A major redesign and feature overhaul is coming — stay tuned!
+
+<br/>
+
 [![Live Demo](https://img.shields.io/badge/▶_LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://sanidhy-portfolio.vercel.app/)
+&nbsp;&nbsp;
+[![Version](https://img.shields.io/badge/version-2.0_Beta-orange?style=for-the-badge&logo=rocket&logoColor=white)]()
 &nbsp;&nbsp;
 [![Stars](https://img.shields.io/github/stars/SanidhyaGupta-10/Sanidhya_Portfolio?style=for-the-badge&logo=github&color=f5c842)](https://github.com/SanidhyaGupta-10/Sanidhya_Portfolio)
 &nbsp;&nbsp;
@@ -214,6 +220,24 @@ Specializing in the JavaScript ecosystem, turning complex ideas into smooth, rea
 
 ---
 
+## 🚧 Coming in v2.0 Beta
+
+We're actively working on a major **v2.0 Beta** release of the portfolio. Here's a sneak peek at what's coming:
+
+| | Upcoming Feature | Details |
+|---|---|---|
+| 🎨 | **Complete UI Redesign** | Refreshed look with new themes and visual polish |
+| 🌙 | **Dark / Light Mode Toggle** | System-aware theme switching across all apps |
+| 📱 | **Mobile Responsive Layout** | Optimized experience on phones and tablets |
+| 🔊 | **Sound Effects** | Subtle macOS-style audio feedback on interactions |
+| 🗂️ | **More Apps** | New built-in apps expanding the desktop ecosystem |
+| ⚡ | **Performance Upgrades** | Faster load times, optimized animations |
+| 🌐 | **Multi-language Support** | Internationalization for a global audience |
+
+> 🛠️ **Beta release is actively in development.** Watch this repo to get notified when it drops!
+
+---
+
 ## 📄 License
 
 This project is open source under the **[MIT License](LICENSE)**.
@@ -230,6 +254,6 @@ This project is open source under the **[MIT License](LICENSE)**.
 
 Built with ❤️ and way too much attention to detail by [Sanidhya Gupta](https://github.com/SanidhyaGupta-10)
 
-<sub>© 2025 Sanidhya Gupta. All rights reserved.</sub>
+<sub>© 2025–2026 Sanidhya Gupta. All rights reserved. · v1.0 stable · v2.0 Beta coming soon</sub>
 
 </div>
